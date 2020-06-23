@@ -1,0 +1,25 @@
+#download BLAST & HMMER
+#使用wget在后台下载安装包
+wget -b [URL]
+#URL
+# BLAST 在NCBI找
+# HMMER https://eddylab.org/software/hmmer3/3.1b2/hmmer-3.1b2-linux-intel-x86_64.tar.gz
+
+#unpack BLAST .tar.gz是一个压缩包 .tar只是打包而没有压缩
+tar -zxvf []
+z	通过gzip支持的压缩或解压缩。还有其他的压缩或解压缩方式，比如j表示bzip2的方式
+x	解压缩
+v	在压缩或解压缩过程中显示正在处理的文件名
+f	f后面必须跟上要处理的文件名。
+
+#设置环境变量
+#cd至BLAST文件夹下bin，pwd 复制路径.../bin
+vim ~/.bashrc
+#在最后面加一行,保存退出
+export BASH=.../bin:$PATH
+#更新配置
+sourse ~/.bashrc
+
+# HMMER同理，只不过是将binaries写入PATH
+
+
