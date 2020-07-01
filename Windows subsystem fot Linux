@@ -29,3 +29,10 @@ makeblastdp -in use2makedpseq.fa -dbtype prot
 
 #进行BLAST，以BLASTP为例
 blastp -query queryfilename.fa -db dbfilename.fa -out outfilename.fa -evalue 1e-5 -outfmt 6
+
+#local HMMER
+#用蛋白seq，创建其HMM模型
+
+hmmbuild hmmfile.hmm proseq.fa
+#用hmm模型来检索待选序列
+hmmsearch hmmfile.hmm searchproseq.fa > outfile.txt
