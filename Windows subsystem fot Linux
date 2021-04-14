@@ -25,7 +25,7 @@ sourse ~/.bashrc
 
 #local BLAST
 #先创建一个索引库db,以BLASTP为例
-makeblastdp -in use2makedpseq.fa -dbtype prot
+makeblastdp -in use2makedpseq.fa -dbtype prot/nucl
 
 #进行BLAST，以BLASTP为例
 blastp -query queryfilename.fa -db dbfilename.fa -out outfilename.fa -evalue 1e-5 -outfmt 6
